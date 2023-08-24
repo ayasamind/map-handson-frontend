@@ -1,4 +1,4 @@
-# LIGHT 地図キュレーションサービス（仮）frontend
+# Mapハンズオンフロントエンド
 ## 各種バージョン
 - node v18.13.0
   - nodenv 環境推奨（`.node-version` で指定済）

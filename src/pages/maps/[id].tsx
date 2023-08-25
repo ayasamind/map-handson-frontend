@@ -30,7 +30,25 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     return { notFound: true };
   }
   try {
-    const res = await axios.get(`${process.env.API_BASE_URL}/maps/${id}`);
+    // const res = await axios.get(`${process.env.API_BASE_URL}/maps/${id}`);
+    const res = {
+      data: {
+        id: 1,
+        title: "test",
+        description: "test",
+        center_lat: 33.5959,
+        center_lon: 130.4017,
+        zoom_level: 12,
+        pins: [
+          {
+            title: "test",
+            lat: 33.5959,
+            lon: 130.4017,
+            description: "test",
+          }
+        ]
+      }
+    }
     const mapParams: MapParams = res.data
     return { props: mapParams }
   } catch (error) {

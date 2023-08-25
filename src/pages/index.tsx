@@ -26,7 +26,16 @@ type Props = {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await axios.get(`${process.env.API_BASE_URL}/maps`);
+  // const res = await axios.get(`${process.env.API_BASE_URL}/maps`);
+  const res =
+  {
+    data: [
+      {
+        id: 1,
+        title: "test",
+      }
+    ]
+  }
   const maps = res.data
   return {
     props: {
